@@ -13,6 +13,10 @@ In search of that equilibrium, this analysis will go over through some World Dev
 
 ### Objectives
 
+* Identify the top countries that provide international education and those that opt for studying abroad along with trends related to those.
+* Identify if some specific factors/conditions of a given country relate to the number of international students they have.
+* Predict the amount of international students for a given country given those factors.
+
 ## Methodology
 
 ### Data Sources
