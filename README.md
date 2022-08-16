@@ -103,7 +103,7 @@ All of the data were acquired in the World Development Indicators of the World B
 
 Data was gathered for 217 countries and from the last 15 years (2007-2021).
 
-### Data Preparation/Cleaning
+### Exploratory Data Analysis/Preparation/Cleaning
 
 Preparation, Cleaning, Visualization were all done in Jupyter Notebook.  A separate notebook was created to contain all helper functions that will prepare/clean/transform/visualize the data frames.
 
@@ -118,9 +118,19 @@ Taking the CO2 emissions, it was determined to further analyze data for these co
 
 These countries are large in terms of land area and population to have significant impact to the environment for us to look into further.
 
-To normalize the data to possibly mitigate the effect of land area, feature engineering was done where gas emissions data were transformed to be emissions per land area of each country.
+To normalize the data to possibly mitigate the effect of land area, feature engineering was done where gas emissions data were transformed to be emissions per land area of each country.  Also, the annual change in forest area was calculated.
 
-Overall, for analysis, the following were used:
+In summary, after checking the data, the following were observed:
+* CO2, Green House Gas (GHG), Methane and Nitrous Oxide emissions data are very much similar to each other with China and the United States are in the top 2 where China is mostly trending upwards on emissions.
+* China and India are already at 100% on population exposed to pollution levels.  However, the mean annual exposure, in the given countries, is slightly decreasing/level.  Clearly, United States and Japan have severely reduced the amount of their population subjected to significant air pollution.
+* In GDP/GDP per capita, aside from Russia and Japan which have up and downs, GDP is trending upwards.
+* In Forest Area data, when the annual change graph was derived, it showed that all 5 countries don't have much change in their forest area but are trending upwards in general.
+* For Population/Urbanization, population growth is increasing in general.  However, population growth is slowing down with Japan shows increase in rural population and decrease in urban population.
+* After gas emissions data were normalized against respective land areas, it now shows Japan being top in emission per their land area with China coming up next.
+
+## Analysis and Results
+
+For analysis, the following were used:
 
 Gas Emissions/Pollution Indicators
 
@@ -145,12 +155,32 @@ World Development Indicators
 | Urbanization | SP.RUR.TOTL.ZG | Rural population growth (annual %) |
 | Urbanization | SP.URB.GROW | Urban population growth (annual %) |
 
-## Analysis and Results
+To clearly see how these metrics relate with each other, a correlation matrix was produced (taking out the Country and Year fields from the set).
+
+![alt text](https://github.com/jords-santiago/humans_are_pollutants/blob/main/99_Pictures/corr_overall.png "Correlation - Overall") 
+
+Also, to get more detail, correlation matrices were produced for these countries:
+
+United States:
+
+![alt text](https://github.com/jords-santiago/humans_are_pollutants/blob/main/99_Pictures/corr_USA.png "Correlation - United States") 
+
+Japan:
+
+![alt text](https://github.com/jords-santiago/humans_are_pollutants/blob/main/99_Pictures/corr_JAPAN.png "Correlation - Japan") 
+
+India:
+
+![alt text](https://github.com/jords-santiago/humans_are_pollutants/blob/main/99_Pictures/corr_INDIA.png "Correlation - India") 
 
 ## Conclusions
 
+In general, the data shows that gas emissions and air pollution increase along with the development indicators like population growth and GDP.  These 5 countries are among the most developed in the world thus the GDP and population.  Also, the data only span from 2010 to 2017 as this the time period that the data gathered have in common but seems not enough to find a significant trend.
+
+On the other hand, Forest Area being negatively correlated with gas emissions and pollution may be something worth looking further into as most countries in the set have this trend.
+
 ## Recommendations
 
+Overall, it may be better to find trends on this on a per country basis instead of finding out trends on multiple countries.  Cultures may play a role on how each country address any environment issues and natural calamities are not the same in all countries.
 
-
-
+At this analysis, however, Forest Area seems to be significant to having less gas emissions and pollution.  Looking further into data on reforestation and even tree conditions (e.g. there maybe a lot of forests in California but significant parts of those are "dead trees" that would just be fuel to forest fires) would give further detail if those definitely help address the environment.  This kind of data are usually found in GIS (Geographic Information System) databases which have a different way of processing/preparation before it can be analyzed in this manner.
