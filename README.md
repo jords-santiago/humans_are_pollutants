@@ -7,6 +7,7 @@ An Analysis of World Development Indicators towards adverse impact to our Enviro
 * In general, world development indicators such as GDP and population growth increase along with gas emissions and air pollution but this is expected as the countries sampled are those fairly developed.
 * To see a significant trend along with GDP and population, more data should be acquired as data from 2010 to 2017 were available.
 * Forest Area is seen to have negative correlation with gas emission and pollution both on taking all 5 countries and for each country in general.
+* Looking into trends on a per country basis, along with other indicators, may bring new insights as culture/government may play a role on how each country address their environment issue.
 * It is recommended to look further in to forest/tree/vegetation data with respect to gas emissions and air pollution as it seems to contribute against them.
 
 ## Introduction
